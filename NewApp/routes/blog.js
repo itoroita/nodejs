@@ -41,7 +41,7 @@ router.get("/read", function(req, res, next) {
 });
 
 router.post("/signup", function(req, res, next) {
-  db.collection("users").insert(body, function(err, result) {
+  db.collection("users").insert(req:body, function(err, result) {
   	  console.log(err, result)
       res.send(result);
     });
